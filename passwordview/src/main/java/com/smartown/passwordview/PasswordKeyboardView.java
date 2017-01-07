@@ -14,6 +14,7 @@ import android.widget.FrameLayout;
 public class PasswordKeyboardView extends FrameLayout implements View.OnClickListener {
 
     private PasswordView passwordView;
+    private Listener listener;
 
     public PasswordKeyboardView(Context context) {
         super(context);
@@ -55,11 +56,12 @@ public class PasswordKeyboardView extends FrameLayout implements View.OnClickLis
         setVisibility(VISIBLE);
     }
 
+    public void setListener(Listener listener) {
+        this.listener = listener;
+    }
+
     @Override
     public void onClick(View v) {
-        if (passwordView == null) {
-            return;
-        }
         final String tag = (String) v.getTag();
         if (tag != null) {
             switch (tag) {
@@ -67,12 +69,31 @@ public class PasswordKeyboardView extends FrameLayout implements View.OnClickLis
                     hide();
                     break;
                 case "delete":
-                    passwordView.delete();
+                    if (passwordView != null) {
+                        passwordView.delete();
+                    }
+                    if (listener != null) {
+                        listener.onDelete();
+                    }
                     break;
                 default:
-                    passwordView.input(tag);
+                    if (passwordView != null) {
+                        passwordView.input(tag);
+                    }
+                    if (listener != null) {
+                        listener.onInput(tag);
+                    }
                     break;
             }
         }
     }
+
+    public interface Listener {
+
+        public void onInput(String s);
+
+        public void onDelete();
+
+    }
+
 }
