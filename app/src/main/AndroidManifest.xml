@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PasswordActivity"
+            android:name=".CodeActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/PasswordActivity" />

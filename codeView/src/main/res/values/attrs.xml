@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="PasswordView">
+    <declare-styleable name="CodeView">
         <attr name="length" format="integer" />
         <attr name="borderColor" format="color" />
         <attr name="borderWidth" format="dimension" />
         <attr name="dividerColor" format="color" />
         <attr name="dividerWidth" format="dimension" />
-        <attr name="pointColor" format="color" />
+        <attr name="code" format="string" />
+        <attr name="codeColor" format="color" />
         <attr name="pointRadius" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="showType" format="enum">
+            <enum name="word" value="1" />
+            <enum name="password" value="2" />
+        </attr>
     </declare-styleable>
 </resources>

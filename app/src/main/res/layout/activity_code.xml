@@ -18,7 +18,7 @@
             android:background="#fafafa"
             android:padding="16dp">
 
-            <com.smartown.passwordview.PasswordView
+            <com.smartown.codeView.CodeView
                 android:id="@+id/password_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
 
     </RelativeLayout>
 
-    <com.smartown.passwordview.PasswordKeyboardView
+    <com.smartown.codeView.KeyboardView
         android:id="@+id/password_input"
         android:layout_width="match_parent"
         android:layout_height="240dp" />

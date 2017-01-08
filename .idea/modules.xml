@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WeChatPwd.iml" filepath="$PROJECT_DIR$/WeChatPwd.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WeChatPwd.iml" filepath="$PROJECT_DIR$/WeChatPwd.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/passwordview/passwordview.iml" filepath="$PROJECT_DIR$/passwordview/passwordview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/passwordview/passwordview.iml" filepath="$PROJECT_DIR$/passwordview/passwordview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codeView/codeView.iml" filepath="$PROJECT_DIR$/codeView/codeView.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.smartown.passwordview;
+package com.smartown.codeView;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -11,23 +11,23 @@ import android.widget.FrameLayout;
  * Date:2017/1/7 21:39
  * Description:
  */
-public class PasswordKeyboardView extends FrameLayout implements View.OnClickListener {
+public class KeyboardView extends FrameLayout implements View.OnClickListener {
 
-    private PasswordView passwordView;
+    private CodeView codeView;
     private Listener listener;
 
-    public PasswordKeyboardView(Context context) {
+    public KeyboardView(Context context) {
         super(context);
         init();
     }
 
-    public PasswordKeyboardView(Context context, AttributeSet attrs) {
+    public KeyboardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public void setPasswordView(PasswordView passwordView) {
-        this.passwordView = passwordView;
+    public void setCodeView(CodeView codeView) {
+        this.codeView = codeView;
     }
 
     private void init() {
@@ -49,7 +49,7 @@ public class PasswordKeyboardView extends FrameLayout implements View.OnClickLis
     }
 
     public void hide() {
-        setVisibility(INVISIBLE);
+        setVisibility(GONE);
     }
 
     public void show() {
@@ -69,16 +69,16 @@ public class PasswordKeyboardView extends FrameLayout implements View.OnClickLis
                     hide();
                     break;
                 case "delete":
-                    if (passwordView != null) {
-                        passwordView.delete();
+                    if (codeView != null) {
+                        codeView.delete();
                     }
                     if (listener != null) {
                         listener.onDelete();
                     }
                     break;
                 default:
-                    if (passwordView != null) {
-                        passwordView.input(tag);
+                    if (codeView != null) {
+                        codeView.input(tag);
                     }
                     if (listener != null) {
                         listener.onInput(tag);
