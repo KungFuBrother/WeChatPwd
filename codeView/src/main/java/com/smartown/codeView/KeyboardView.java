@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 /**
- * Author:Smartown
+ * Author:<a href='https://github.com/kungfubrother'>https://github.com/kungfubrother</a>
  * Date:2017/1/7 21:39
- * Description:
+ * Description:数字输入键盘
  */
 public class KeyboardView extends FrameLayout implements View.OnClickListener {
 

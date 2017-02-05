@@ -2,81 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <TextView
-                android:id="@+id/main_wechat"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/button"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="仿微信支付密码"
-                android:textColor="#555"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/main_sms"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/button"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="短信验证码"
-                android:textColor="#555"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/main_id_card"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/button"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="身份证号码"
-                android:textColor="#555"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#e1e1e1" />
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/main_edit"
+        android:id="@+id/main_wechat"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/edit_background"
-        android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button"
+        android:gravity="center"
         android:singleLine="true"
-        android:textColor="#111111"
+        android:text="仿微信支付密码"
+        android:textColor="#555"
         android:textSize="16dp" />
 
-    <com.smartown.codeView.KeyboardView
-        android:id="@+id/main_keyboard"
+    <TextView
+        android:id="@+id/main_sms"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:visibility="gone" />
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="短信验证码"
+        android:textColor="#555"
+        android:textSize="16dp" />
 
 </LinearLayout>

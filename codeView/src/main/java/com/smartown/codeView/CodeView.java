@@ -9,9 +9,9 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Author:Smartown
+ * Author:<a href='https://github.com/kungfubrother'>https://github.com/kungfubrother</a>
  * Date:2017/1/7 20:12
- * Description:
+ * Description:密码显示控件
  */
 public class CodeView extends View {
 

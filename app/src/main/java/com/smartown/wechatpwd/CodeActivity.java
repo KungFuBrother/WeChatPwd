@@ -4,22 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
-import android.text.TextUtils;
 import android.view.View;
 
 import com.smartown.codeView.CodeView;
 import com.smartown.codeView.KeyboardView;
 
 /**
- * Author:Smartown
+ * Author:<a href='https://github.com/kungfubrother'>https://github.com/kungfubrother</a>
  * Date:2017/1/7 20:47
  * Description:
  */
-public class CodeActivity extends FragmentActivity {
-
-    public final static int REQUEST_CODE = 0x10;
-    public final static int RESULT_CODE = 0x11;
+public class CodeActivity extends Activity {
 
     public static void inputSmsCode(Activity activity, int length) {
         input(activity, CodeView.SHOW_TYPE_WORD, length);
@@ -33,15 +28,7 @@ public class CodeActivity extends FragmentActivity {
         Intent intent = new Intent(activity, CodeActivity.class);
         intent.putExtra("showType", showType);
         intent.putExtra("length", length);
-        activity.startActivityForResult(intent, REQUEST_CODE);
-    }
-
-    public static String getResult(Intent intent) {
-        String result = "";
-        if (intent != null) {
-            result = intent.getStringExtra("result");
-        }
-        return TextUtils.isEmpty(result) ? "" : result;
+        activity.startActivity(intent);
     }
 
     @Override
@@ -62,15 +49,12 @@ public class CodeActivity extends FragmentActivity {
         codeView.setListener(new CodeView.Listener() {
             @Override
             public void onValueChanged(String value) {
-
+                // TODO: 2017/2/5  内容发生变化
             }
 
             @Override
             public void onComplete(String value) {
-                Intent intent = new Intent();
-                intent.putExtra("result", value);
-                setResult(RESULT_CODE, intent);
-                finish();
+                // TODO: 2017/2/5 输入完成 
             }
         });
     }
