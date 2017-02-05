@@ -34,4 +34,4 @@
 ### 效果展示
 微信|密码输入|明文输入
 ---|---|---
-![wechat](http://upload-images.jianshu.io/upload_images/1951791-43b55f04abd72bb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/438)|![密码.gif](./image/密码.gif)|![明文.gif](./image/明文.gif)
+![wechat.png](./image/wechat.png)|![密码.gif](./image/密码.gif)|![明文.gif](./image/明文.gif)
